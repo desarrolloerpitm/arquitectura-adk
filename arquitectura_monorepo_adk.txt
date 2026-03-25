@@ -1,0 +1,97 @@
+├── src
+│   ├── config
+│   │   ├── envs.config.ts
+│   │   ├── pdfmake.config.ts
+│   │   └── swagger.option.ts
+│   ├── constants
+│   │   └── reporte.constant.ts
+│   ├── libs
+│   │   └── multer.lib.ts
+│   ├── modules
+│   │   ├── b2b
+│   │   │   ├── interfaces
+│   │   │   │   └── orden-compra.interface.ts
+│   │   │   ├── reports
+│   │   │   │   ├── sections
+│   │   │   │   │   ├── footer.section.ts
+│   │   │   │   │   ├── header.section.ts
+│   │   │   │   │   ├── info-pedido.section.ts
+│   │   │   │   │   ├── obervaciones-totales.section.ts
+│   │   │   │   │   └── product-table.section.ts
+│   │   │   │   └── historial-productos.report.ts
+│   │   │   ├── b2b.controller.ts
+│   │   │   ├── b2b.routes.ts
+│   │   │   ├── b2b.service.ts
+│   │   │   └── swagger.yaml
+│   │   ├── files
+│   │   │   ├── files.controller.ts
+│   │   │   ├── files.routes.ts
+│   │   │   └── swagger.yaml
+│   │   └── fip
+│   │       ├── interfaces
+│   │       │   ├── amortizacion.interface.ts
+│   │       │   ├── estado-cuenta.enum.ts
+│   │       │   ├── estado-cuenta.interface.ts
+│   │       │   ├── prefactibilidad.interface.ts
+│   │       │   └── solicitud-credito.interface.ts
+│   │       ├── reports
+│   │       │   ├── amortizacion.report
+│   │       │   │   ├── sections
+│   │       │   │   │   ├── firma-empleado.section.ts
+│   │       │   │   │   ├── footer.section.ts
+│   │       │   │   │   ├── header.section.ts
+│   │       │   │   │   ├── info-amortizacion.section.ts
+│   │       │   │   │   └── tabla-amortizacion.section.ts
+│   │       │   │   └── index.ts
+│   │       │   ├── estado-cuenta.report
+│   │       │   │   ├── sections
+│   │       │   │   │   ├── footer.section.ts
+│   │       │   │   │   ├── header.section.ts
+│   │       │   │   │   ├── info-credito.section.ts
+│   │       │   │   │   ├── tabla-pagos.section.ts
+│   │       │   │   │   └── tabla-sin-pagos.section.ts
+│   │       │   │   └── index.ts
+│   │       │   ├── prefactibilidad.report
+│   │       │   │   ├── sections
+│   │       │   │   │   ├── datos-solicitante.section.ts
+│   │       │   │   │   ├── espacio-exclusivo.section.ts
+│   │       │   │   │   ├── evaluacion-perfil.section.ts
+│   │       │   │   │   ├── firma.section.ts
+│   │       │   │   │   ├── footer.section.ts
+│   │       │   │   │   └── header.section.ts
+│   │       │   │   └── index.ts
+│   │       │   └── solicitud-credito.report
+│   │       │       ├── sections
+│   │       │       │   ├── footer.section.ts
+│   │       │       │   ├── header.section.ts
+│   │       │       │   ├── info-autorizacines.section.ts
+│   │       │       │   ├── info-credito.section.ts
+│   │       │       │   ├── info-documentos.section.ts
+│   │       │       │   ├── info-financiera.section.ts
+│   │       │       │   ├── info-referencias.section.ts
+│   │       │       │   └── info-solicitante.section.ts
+│   │       │       └── index.ts
+│   │       ├── fip.controller.ts
+│   │       ├── fip.routes.ts
+│   │       ├── fip.service.ts
+│   │       └── swagger.yaml
+│   ├── utils
+│   │   └── format.util.ts
+│   ├── app.ts
+│   └── index.ts
+├── .dockerignore
+├── .env
+├── .eslintrc.json
+├── .gitignore
+├── .prettierrc
+├── arquitectura.ps1
+├── docker-compose.dev.yaml
+├── docker-compose.prod.yaml
+├── Dockerfile.dev
+├── Dockerfile.prod
+├── example.env
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── tsconfig.json

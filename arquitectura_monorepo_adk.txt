@@ -1,27 +1,43 @@
+├── .dockerignore
+├── .env
+├── .eslintignore
+├── .eslintrc.json
+├── .gitignore
 ├── .husky
-│   ├── _
-│   │   ├── .gitignore
-│   │   ├── applypatch-msg
-│   │   ├── commit-msg
-│   │   ├── h
-│   │   ├── husky.sh
-│   │   ├── post-applypatch
-│   │   ├── post-checkout
-│   │   ├── post-commit
-│   │   ├── post-merge
-│   │   ├── post-rewrite
-│   │   ├── pre-applypatch
-│   │   ├── pre-auto-gc
-│   │   ├── pre-commit
-│   │   ├── pre-merge-commit
-│   │   ├── pre-push
-│   │   ├── pre-rebase
-│   │   └── prepare-commit-msg
-│   └── pre-commit
+│   ├── pre-commit
+│   └── _
+│       ├── .gitignore
+│       ├── applypatch-msg
+│       ├── commit-msg
+│       ├── h
+│       ├── husky.sh
+│       ├── post-applypatch
+│       ├── post-checkout
+│       ├── post-commit
+│       ├── post-merge
+│       ├── post-rewrite
+│       ├── pre-applypatch
+│       ├── pre-auto-gc
+│       ├── pre-commit
+│       ├── pre-merge-commit
+│       ├── pre-push
+│       ├── pre-rebase
+│       └── prepare-commit-msg
+├── .prettierrc
+├── docker-compose.dev.yaml
+├── docker-compose.prod.yaml
+├── Dockerfile.dev
+├── Dockerfile.prod
+├── example.env
 ├── externals-scripts
 │   └── google-app-script
 │       └── generar-plano-nomina.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
 ├── src
+│   ├── app.ts
 │   ├── common
 │   │   └── providers
 │   │       └── index.ts
@@ -37,10 +53,12 @@
 │   ├── data
 │   │   └── excelJsData.ts
 │   ├── decorators
+│   │   ├── headers-excelJs.decorator.ts
 │   │   ├── interface
 │   │   │   └── tabla-excel.interface.ts
-│   │   ├── headers-excelJs.decorator.ts
 │   │   └── table-excelJs.decorator.ts
+│   ├── documentacion-cambios.md
+│   ├── index.ts
 │   ├── interface
 │   │   ├── excelJs.interface.ts
 │   │   └── respuesta-nomina-connekta.interface.ts
@@ -55,19 +73,19 @@
 │   │   └── verificar-token-publico.middleware.ts
 │   ├── modules
 │   │   ├── b2b
-│   │   │   ├── interfaces
-│   │   │   │   └── orden-compra.interface.ts
-│   │   │   ├── reports
-│   │   │   │   ├── sections
-│   │   │   │   │   ├── footer.section.ts
-│   │   │   │   │   ├── header.section.ts
-│   │   │   │   │   ├── info-pedido.section.ts
-│   │   │   │   │   ├── obervaciones-totales.section.ts
-│   │   │   │   │   └── product-table.section.ts
-│   │   │   │   └── historial-productos.report.ts
 │   │   │   ├── b2b.controller.ts
 │   │   │   ├── b2b.routes.ts
 │   │   │   ├── b2b.service.ts
+│   │   │   ├── interfaces
+│   │   │   │   └── orden-compra.interface.ts
+│   │   │   ├── reports
+│   │   │   │   ├── historial-productos.report.ts
+│   │   │   │   └── sections
+│   │   │   │       ├── footer.section.ts
+│   │   │   │       ├── header.section.ts
+│   │   │   │       ├── info-pedido.section.ts
+│   │   │   │       ├── obervaciones-totales.section.ts
+│   │   │   │       └── product-table.section.ts
 │   │   │   └── swagger.yaml
 │   │   ├── files
 │   │   │   ├── files.controller.ts
@@ -80,6 +98,9 @@
 │   │   │   │   │   │   └── crear-archivo-plano-bancario-base.dto.ts
 │   │   │   │   │   ├── crear-archivo-plano-bancario.dto.ts
 │   │   │   │   │   └── swagger.yaml
+│   │   │   │   ├── fip.controller.ts
+│   │   │   │   ├── fip.routes.ts
+│   │   │   │   ├── fip.service.ts
 │   │   │   │   ├── helpers
 │   │   │   │   │   └── crear-archivo-plano-bancario.helper.ts
 │   │   │   │   ├── interfaces
@@ -91,68 +112,65 @@
 │   │   │   │   │   └── solicitud-credito.interface.ts
 │   │   │   │   ├── reports
 │   │   │   │   │   ├── amortizacion.report
-│   │   │   │   │   │   ├── sections
-│   │   │   │   │   │   │   ├── firma-empleado.section.ts
-│   │   │   │   │   │   │   ├── footer.section.ts
-│   │   │   │   │   │   │   ├── header.section.ts
-│   │   │   │   │   │   │   ├── info-amortizacion.section.ts
-│   │   │   │   │   │   │   └── tabla-amortizacion.section.ts
-│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   └── sections
+│   │   │   │   │   │       ├── firma-empleado.section.ts
+│   │   │   │   │   │       ├── footer.section.ts
+│   │   │   │   │   │       ├── header.section.ts
+│   │   │   │   │   │       ├── info-amortizacion.section.ts
+│   │   │   │   │   │       └── tabla-amortizacion.section.ts
 │   │   │   │   │   ├── estado-cuenta.report
-│   │   │   │   │   │   ├── sections
-│   │   │   │   │   │   │   ├── footer.section.ts
-│   │   │   │   │   │   │   ├── header.section.ts
-│   │   │   │   │   │   │   ├── info-credito.section.ts
-│   │   │   │   │   │   │   ├── tabla-pagos.section.ts
-│   │   │   │   │   │   │   └── tabla-sin-pagos.section.ts
-│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   └── sections
+│   │   │   │   │   │       ├── footer.section.ts
+│   │   │   │   │   │       ├── header.section.ts
+│   │   │   │   │   │       ├── info-credito.section.ts
+│   │   │   │   │   │       ├── tabla-pagos.section.ts
+│   │   │   │   │   │       └── tabla-sin-pagos.section.ts
 │   │   │   │   │   ├── prefactibilidad.report
-│   │   │   │   │   │   ├── sections
-│   │   │   │   │   │   │   ├── datos-solicitante.section.ts
-│   │   │   │   │   │   │   ├── espacio-exclusivo.section.ts
-│   │   │   │   │   │   │   ├── evaluacion-perfil.section.ts
-│   │   │   │   │   │   │   ├── firma.section.ts
-│   │   │   │   │   │   │   ├── footer.section.ts
-│   │   │   │   │   │   │   └── header.section.ts
-│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   └── sections
+│   │   │   │   │   │       ├── datos-solicitante.section.ts
+│   │   │   │   │   │       ├── espacio-exclusivo.section.ts
+│   │   │   │   │   │       ├── evaluacion-perfil.section.ts
+│   │   │   │   │   │       ├── firma.section.ts
+│   │   │   │   │   │       ├── footer.section.ts
+│   │   │   │   │   │       └── header.section.ts
 │   │   │   │   │   └── solicitud-credito.report
-│   │   │   │   │       ├── sections
-│   │   │   │   │       │   ├── footer.section.ts
-│   │   │   │   │       │   ├── header.section.ts
-│   │   │   │   │       │   ├── info-autorizacines.section.ts
-│   │   │   │   │       │   ├── info-credito.section.ts
-│   │   │   │   │       │   ├── info-documentos.section.ts
-│   │   │   │   │       │   ├── info-financiera.section.ts
-│   │   │   │   │       │   ├── info-referencias.section.ts
-│   │   │   │   │       │   └── info-solicitante.section.ts
-│   │   │   │   │       └── index.ts
-│   │   │   │   ├── fip.controller.ts
-│   │   │   │   ├── fip.routes.ts
-│   │   │   │   ├── fip.service.ts
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       └── sections
+│   │   │   │   │           ├── footer.section.ts
+│   │   │   │   │           ├── header.section.ts
+│   │   │   │   │           ├── info-autorizacines.section.ts
+│   │   │   │   │           ├── info-credito.section.ts
+│   │   │   │   │           ├── info-documentos.section.ts
+│   │   │   │   │           ├── info-financiera.section.ts
+│   │   │   │   │           ├── info-referencias.section.ts
+│   │   │   │   │           └── info-solicitante.section.ts
 │   │   │   │   └── swagger.yaml
 │   │   │   └── nomina
 │   │   │       ├── helpers
 │   │   │       │   └── reportes.helper.ts
 │   │   │       ├── interfaces
 │   │   │       │   └── nomina.interface.ts
-│   │   │       ├── reports
-│   │   │       │   └── generar-excel-nomina.report.ts
-│   │   │       └── nomina.service.ts
+│   │   │       ├── nomina.service.ts
+│   │   │       └── reports
+│   │   │           └── generar-excel-nomina.report.ts
 │   │   ├── providers
 │   │   │   └── connekta
+│   │   │       ├── connekta.service.ts
 │   │   │       ├── helpers
 │   │   │       │   └── filtros-nomina-connekta.helper.ts
-│   │   │       ├── interface
-│   │   │       │   └── filtros-connekta.interface.ts
-│   │   │       └── connekta.service.ts
+│   │   │       └── interface
+│   │   │           └── filtros-connekta.interface.ts
 │   │   └── public
 │   │       ├── auth
-│   │       │   ├── dto
-│   │       │   │   ├── auth.dto.ts
-│   │       │   │   └── swagger.yaml
 │   │       │   ├── auth.controller.ts
 │   │       │   ├── auth.routes.ts
 │   │       │   ├── auth.service.ts
+│   │       │   ├── dto
+│   │       │   │   ├── auth.dto.ts
+│   │       │   │   └── swagger.yaml
 │   │       │   └── swagger.yaml
 │   │       └── nomina
 │   │           ├── dto
@@ -168,30 +186,11 @@
 │   │   ├── index.routes.ts
 │   │   ├── internals.routes.ts
 │   │   └── public.routes.ts
-│   ├── utils
-│   │   ├── calcular-ancho-columna.util.ts
-│   │   ├── excelJs.util.ts
-│   │   ├── format.util.ts
-│   │   ├── generar-excel.util.ts
-│   │   ├── token-publico.util.ts
-│   │   └── transformaciones-bancarias.util.ts
-│   ├── app.ts
-│   ├── documentacion-cambios.md
-│   └── index.ts
-├── .dockerignore
-├── .env
-├── .eslintignore
-├── .eslintrc.json
-├── .gitignore
-├── .prettierrc
-├── arquitectura.ps1
-├── docker-compose.dev.yaml
-├── docker-compose.prod.yaml
-├── Dockerfile.dev
-├── Dockerfile.prod
-├── example.env
-├── index.html
-├── package-lock.json
-├── package.json
-├── README.md
+│   └── utils
+│       ├── calcular-ancho-columna.util.ts
+│       ├── excelJs.util.ts
+│       ├── format.util.ts
+│       ├── generar-excel.util.ts
+│       ├── token-publico.util.ts
+│       └── transformaciones-bancarias.util.ts
 └── tsconfig.json

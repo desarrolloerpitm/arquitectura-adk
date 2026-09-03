@@ -29,6 +29,7 @@
 ├── Dockerfile.dev
 ├── Dockerfile.prod
 ├── example.env
+├── excalidraw.log
 ├── externals-scripts
 │   └── google-app-script
 │       └── generar-plano-nomina.js
@@ -73,26 +74,27 @@
 │   │   ├── validar-dto.middleware.ts
 │   │   └── verificar-token-publico.middleware.ts
 │   ├── modules
-│   │   ├── b2b
-│   │   │   ├── b2b.controller.ts
-│   │   │   ├── b2b.routes.ts
-│   │   │   ├── b2b.service.ts
-│   │   │   ├── interfaces
-│   │   │   │   └── orden-compra.interface.ts
-│   │   │   ├── reports
-│   │   │   │   ├── historial-productos.report.ts
-│   │   │   │   └── sections
-│   │   │   │       ├── footer.section.ts
-│   │   │   │       ├── header.section.ts
-│   │   │   │       ├── info-pedido.section.ts
-│   │   │   │       ├── obervaciones-totales.section.ts
-│   │   │   │       └── product-table.section.ts
-│   │   │   └── swagger.yaml
-│   │   ├── files
-│   │   │   ├── files.controller.ts
-│   │   │   ├── files.routes.ts
-│   │   │   └── swagger.yaml
 │   │   ├── internals
+│   │   │   ├── b2b
+│   │   │   │   ├── b2b.controller.ts
+│   │   │   │   ├── b2b.routes.ts
+│   │   │   │   ├── b2b.service.ts
+│   │   │   │   ├── interfaces
+│   │   │   │   │   └── orden-compra.interface.ts
+│   │   │   │   ├── reports
+│   │   │   │   │   ├── historial-productos.report.ts
+│   │   │   │   │   └── sections
+│   │   │   │   │       ├── footer.section.ts
+│   │   │   │   │       ├── header.section.ts
+│   │   │   │   │       ├── info-pedido.section.ts
+│   │   │   │   │       ├── obervaciones-totales.section.ts
+│   │   │   │   │       └── product-table.section.ts
+│   │   │   │   └── swagger.yaml
+│   │   │   ├── files
+│   │   │   │   ├── files.controller.ts
+│   │   │   │   ├── files.routes.ts
+│   │   │   │   ├── files.service.ts
+│   │   │   │   └── swagger.yaml
 │   │   │   ├── fip
 │   │   │   │   ├── dto
 │   │   │   │   │   ├── crear-archivo-plano-bancario
@@ -164,7 +166,7 @@
 │   │   │       │   └── filtros-nomina-connekta.helper.ts
 │   │   │       └── interface
 │   │   │           └── filtros-connekta.interface.ts
-│   │   └── public
+│   │   └── publics
 │   │       ├── auth
 │   │       │   ├── auth.controller.ts
 │   │       │   ├── auth.routes.ts
@@ -179,7 +181,6 @@
 │   │           │   └── swagger.yaml
 │   │           ├── nomina.controller.ts
 │   │           ├── nomina.routes.ts
-│   │           ├── nomina.service.ts
 │   │           └── swagger.yaml
 │   ├── reports
 │   │   └── planos-bancarios.report.ts

@@ -1,3 +1,6 @@
+├── .agents
+│   └── resources
+│       └── Estandares_de_desarrollo_ERP_2026.md
 ├── .dockerignore
 ├── .env
 ├── .eslintignore
@@ -24,12 +27,12 @@
 │       ├── pre-rebase
 │       └── prepare-commit-msg
 ├── .prettierrc
-├── docker-compose.dev.yaml
-├── docker-compose.prod.yaml
-├── Dockerfile.dev
-├── Dockerfile.prod
+├── .scannerwork
+│   ├── .sonar_lock
+│   └── report-task.txt
+├── docker-compose.yaml
+├── Dockerfile
 ├── example.env
-├── excalidraw.log
 ├── externals-scripts
 │   └── google-app-script
 │       └── generar-plano-nomina.js
@@ -38,6 +41,7 @@
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 ├── README.md
+├── sonar-project.properties
 ├── src
 │   ├── app.ts
 │   ├── common
@@ -59,7 +63,6 @@
 │   │   ├── interface
 │   │   │   └── tabla-excel.interface.ts
 │   │   └── table-excelJs.decorator.ts
-│   ├── documentacion-cambios.md
 │   ├── index.ts
 │   ├── interface
 │   │   ├── excelJs.interface.ts
@@ -79,6 +82,12 @@
 │   │   │   │   ├── b2b.controller.ts
 │   │   │   │   ├── b2b.routes.ts
 │   │   │   │   ├── b2b.service.ts
+│   │   │   │   ├── dto
+│   │   │   │   │   ├── crear-reporte-orden-compra.dto.ts
+│   │   │   │   │   ├── filtros-b2b-base.dto.ts
+│   │   │   │   │   ├── filtros-b2b.dto.ts
+│   │   │   │   │   ├── producto-orden-compra.dto.ts
+│   │   │   │   │   └── swagger.yaml
 │   │   │   │   ├── interfaces
 │   │   │   │   │   └── orden-compra.interface.ts
 │   │   │   │   ├── reports
